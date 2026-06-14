@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TECHZONE MAX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+     PRELOADER
+========================= -->
+
+<div id="preloader">
+
+    <div class="loader"></div>
+
+    <h2>TECHZONE MAX</h2>
+
+</div>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        TECH<span>ZONE</span>
+
+    </div>
+
+    <div class="search-container">
+
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Поиск техники...">
+
+    </div>
+
+    <div class="header-actions">
+
+        <button id="themeBtn">
+            🌙
+        </button>
+
+        <button id="favoriteBtn">
+            ❤️
+            <span id="favoriteCount">
+                0
+            </span>
+        </button>
+
+        <button id="cartBtn">
+            🛒
+            <span id="cartCount">
+                0
+            </span>
+        </button>
+
+        <button id="loginOpen">
+            Войти
+        </button>
+
+    </div>
+
+</header>
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-title">
+
+        Категории
+
+    </div>
+
+    <ul>
+
+        <li data-category="all">
+            🏪 Все товары
+        </li>
+
+        <li data-category="smartphones">
+            📱 Смартфоны
+        </li>
+
+        <li data-category="laptops">
+            💻 Ноутбуки
+        </li>
+
+        <li data-category="tablets">
+            📲 Планшеты
+        </li>
+
+        <li data-category="tv">
+            📺 Телевизоры
+        </li>
+
+        <li data-category="gaming">
+            🎮 Игровые устройства
+        </li>
+
+        <li data-category="audio">
+            🎧 Наушники
+        </li>
+
+        <li data-category="watch">
+            ⌚ Смарт часы
+        </li>
+
+        <li data-category="sale">
+            🔥 Акции
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+
+            Лучшие технологии будущего
+
+        </h1>
+
+        <p>
+
+            Более 5000 товаров.
+            Лучшие цены.
+            Гарантия качества.
+            Быстрая доставка.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#catalog">
+                Смотреть каталог
+            </a>
+
+            <a href="#sale">
+                Акции
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-circle hero-circle-1"></div>
+    <div class="hero-circle hero-circle-2"></div>
+
+</section>
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="stat-card">
+        <h2>5000+</h2>
+        <p>Товаров</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>10000+</h2>
+        <p>Клиентов</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>500+</h2>
+        <p>Акций</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>24/7</h2>
+        <p>Поддержка</p>
+    </div>
+
+</section>
+
+<!-- =========================
+     BRANDS
+========================= -->
+
+<section class="brands">
+
+<h2>Популярные бренды</h2>
+
+<div class="brand-grid">
+
+<div class="brand-card">Apple</div>
+<div class="brand-card">Samsung</div>
+<div class="brand-card">Xiaomi</div>
+<div class="brand-card">Sony</div>
+<div class="brand-card">ASUS</div>
+<div class="brand-card">Lenovo</div>
+<div class="brand-card">LG</div>
+<div class="brand-card">MSI</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     CATALOG
+========================= -->
+
+<section
+id="catalog"
+class="catalog">
+
+<h2>
+
+Каталог техники
+
+</h2>
+
+<div class="products-grid">
+
+<!-- ТОВАР 1 -->
+
+<div
+class="product-card"
+data-category="smartphones">
+
+<span class="top-badge">
+
+TOP
+
+</span>
+
+<img
+src="data:image/jpeg;base64,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"
+alt="iPhone 16 Pro">
+
+<h3>
+
+iPhone 16 Pro
+
+</h3>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="price">
+
+$1399
+
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="iphone16">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 2 -->
+
+<div
+class="product-card"
+data-category="smartphones">
+
+<img
+src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf"
+alt="Samsung">
+
+<h3>
+
+Samsung S25 Ultra
+
+</h3>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="price">
+
+$1299
+
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="s25">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 3 -->
+
+<div
+class="product-card"
+data-category="laptops">
+
+<img
+src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+alt="MacBook">
+
+<h3>
+
+MacBook Pro M4
+
+</h3>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="price">
+
+$2499
+
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="macbook">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 4 -->
+
+<div
+class="product-card"
+data-category="gaming">
+
+<img
+src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+alt="PS5">
+
+<h3>
+
+PlayStation 5 Pro
+
+</h3>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="price">
+
+$899
+
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="ps5">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 5 -->
+
+<div class="product-card" data-category="audio">
+
+<img
+src="https://images.unsplash.com/photo-1546435770-a3e426bf472b"
+alt="AirPods Max">
+
+<h3>AirPods Max</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$699</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="airpods">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 6 -->
+
+<div class="product-card" data-category="tablets">
+
+<img
+src="data:image/webp;base64,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"
+alt="iPad">
+
+<h3>iPad Pro M4</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$1499</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="ipad">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 7 -->
+
+<div class="product-card" data-category="laptops">
+
+<img
+src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6"
+alt="Dell XPS">
+
+<h3>Dell XPS 15</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$1899</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="xps">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 8 -->
+
+<div class="product-card" data-category="gaming">
+
+<img
+src="data:image/jpeg;base64,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"
+alt="Xbox">
+
+<h3>Xbox Series X</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$699</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="xbox">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 9 -->
+
+<div class="product-card" data-category="watch">
+
+<img
+src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+alt="Apple Watch">
+
+<h3>Apple Watch Ultra 3</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$899</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="watch">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 10 -->
+
+<div class="product-card" data-category="audio">
+
+<img
+src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b"
+alt="Sony">
+
+<h3>Sony WH-1000XM6</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$499</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="sony">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 11 -->
+
+<div class="product-card" data-category="tv">
+
+<img
+src="data:image/jpeg;base64,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"
+alt="LG OLED">
+
+<h3>LG OLED 77</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$3499</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="lg">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ТОВАР 12 -->
+
+<div class="product-card" data-category="laptops">
+
+<img
+src="https://images.unsplash.com/photo-1603302576837-37561b2e2302"
+alt="ROG">
+
+<h3>ASUS ROG Strix</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">$2199</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">Купить</button>
+
+<button class="cart-add">В корзину</button>
+
+<button
+class="info-btn"
+data-product="rog">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     SALE SECTION
+========================= -->
+
+<section
+id="sale"
+class="sale-section">
+
+<h2>
+
+🔥 Горячие скидки
+
+</h2>
+
+<div class="sale-grid">
+
+<div class="product-card sale-card">
+
+<span class="sale-badge">
+-30%
+</span>
+
+<img
+src="data:image/jpeg;base64,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"
+alt="iPhone 16 Pro">
+
+
+<h3>iPhone 16 Pro</h3>
+
+<div class="old-price">
+$1399
+</div>
+
+<div class="price">
+$999
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="iphone16">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card sale-card">
+
+<span class="sale-badge">
+-25%
+</span>
+
+<img
+src="data:image/jpeg;base64,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"
+alt="MacBook">
+
+
+<h3>ipad M4</h3>
+
+<div class="old-price">
+$2499
+</div>
+
+<div class="price">
+$1899
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="macbook">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card sale-card">
+
+<span class="sale-badge">
+-20%
+</span>
+
+<img
+src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+alt="PS5">
+
+<h3>PlayStation 5 Pro</h3>
+
+<div class="old-price">
+$899
+</div>
+
+<div class="price">
+$719
+</div>
+
+<div class="product-buttons">
+
+<button class="buy-btn">
+Купить
+</button>
+
+<button class="cart-add">
+В корзину
+</button>
+
+<button
+class="info-btn"
+data-product="ps5">
+
+Характеристики
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     РУЛЕТКА ТЕХНИКИ
+========================= -->
+
+<section class="roulette-section">
+
+<h2>🎁 Рулетка техники</h2>
+
+<p>
+Нажмите кнопку и получите случайную технику
+</p>
+
+<div class="roulette-box">
+
+<div id="rouletteResult"
+class="roulette-result">
+
+Нажмите "Крутить"
+
+</div>
+
+<button
+id="spinBtn"
+class="spin-btn">
+
+Крутить рулетку
+
+</button>
+
+<button
+id="addPrizeCart"
+class="spin-btn add-prize">
+
+Добавить выигрыш в корзину
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================
+     ПОСЛЕДНИЕ ПРОСМОТРЫ
+========================= -->
+
+
+<!-- =========================
+     НОВОСТИ
+========================= -->
+
+<section class="news-section">
+
+<h2>📰 Новости технологий</h2>
+
+<div class="news-grid">
+
+<div class="news-card">
+
+<h3>Apple представила iPhone 16 Pro</h3>
+
+<p>
+Новый процессор A18 Pro,
+улучшенная камера и автономность.
+</p>
+
+</div>
+
+<div class="news-card">
+
+<h3>Samsung показала Galaxy S25 Ultra</h3>
+
+<p>
+Флагман получил ИИ-функции
+нового поколения.
+</p>
+
+</div>
+
+<div class="news-card">
+
+<h3>PlayStation 5 Pro уже доступна</h3>
+
+<p>
+Новая графика и повышенная
+производительность.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     ДОСТАВКА И ГАРАНТИЯ
+========================= -->
+
+<section class="delivery-section">
+
+<h2>🚚 Доставка и гарантия</h2>
+
+<div class="delivery-grid">
+
+<div class="delivery-card">
+
+<h3>Быстрая доставка</h3>
+
+<p>
+Доставка по всему Узбекистану
+от 1 до 3 дней.
+</p>
+
+</div>
+
+<div class="delivery-card">
+
+<h3>Гарантия</h3>
+
+<p>
+Официальная гарантия
+на всю технику до 24 месяцев.
+</p>
+
+</div>
+
+<div class="delivery-card">
+
+<h3>Возврат товара</h3>
+
+<p>
+Возврат и обмен товара
+в течение 14 дней.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq-section">
+
+<h2>❓ Частые вопросы</h2>
+
+<div class="faq-item">
+
+<h3>
+Как оформить заказ?
+</h3>
+
+<p>
+Добавьте товар в корзину
+и нажмите оформить заказ.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Есть ли гарантия?
+</h3>
+
+<p>
+Да, на всю технику
+предоставляется гарантия.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Можно ли оплатить при получении?
+</h3>
+
+<p>
+Да, доступны разные способы оплаты.
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+     ОТЗЫВЫ
+========================= -->
+
+<section class="reviews">
+
+<h2>⭐ Отзывы покупателей</h2>
+
+<div class="reviews-grid">
+
+<div class="review-card">
+
+<img src="https://i.pravatar.cc/100?img=1">
+
+<h3>Алексей</h3>
+
+<div class="stars">★★★★★</div>
+
+<p>
+Отличный магазин и быстрая доставка.
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://i.pravatar.cc/100?img=2">
+
+<h3>Мария</h3>
+
+<div class="stars">★★★★★</div>
+
+<p>
+Купила ноутбук дешевле чем в других магазинах.
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://i.pravatar.cc/100?img=3">
+
+<h3>Дмитрий</h3>
+
+<div class="stars">★★★★★</div>
+
+<p>
+Очень понравился дизайн сайта.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     АВТОРИЗАЦИЯ
+========================= -->
+
+<div id="loginModal"
+class="modal">
+
+<div class="modal-content">
+
+<span
+id="closeLogin"
+class="close-modal">
+
+&times;
+
+</span>
+
+<h2>Вход в аккаунт</h2>
+
+<input
+type="text"
+id="username"
+placeholder="Логин">
+
+<input
+type="password"
+id="password"
+placeholder="Пароль">
+
+<button
+id="loginSubmit">
+
+Войти
+
+</button>
+
+</div>
+
+</div>
+
+<!-- =========================
+     КОРЗИНА
+========================= -->
+
+<aside
+id="cartSidebar"
+class="cart-sidebar">
+
+<div class="cart-header">
+
+<h2>🛒 Корзина</h2>
+
+<button id="closeCart">
+✕
+</button>
+
+</div>
+
+<div
+id="cartItems"
+class="cart-items">
+
+</div>
+
+<div class="cart-footer">
+
+<h3>
+
+Сумма:
+<span id="cartTotal">
+$0
+</span>
+
+</h3>
+
+<button
+id="clearCart"
+class="cart-action">
+
+Очистить корзину
+
+</button>
+
+<button
+class="cart-action checkout">
+
+Оформить заказ
+
+</button>
+
+</div>
+
+</aside>
+
+<!-- =========================
+     МОДАЛЬНОЕ ОКНО ХАРАКТЕРИСТИК
+========================= -->
+
+<div
+id="productModal"
+class="modal">
+
+<div class="modal-content">
+
+<span
+id="closeModal"
+class="close-modal">
+
+&times;
+
+</span>
+
+<h2 id="modalTitle">
+
+Название товара
+
+</h2>
+
+<div id="modalSpecs">
+
+<p>
+Здесь будут характеристики товара
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     OVERLAY
+========================= -->
+
+<div id="overlay"></div>
+
+<!-- =========================
+     FOOTER PRO
+========================= -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<div class="footer-column">
+
+<h3>TECHZONE MAX</h3>
+
+<p>
+Современный интернет-магазин техники.
+Смартфоны, ноутбуки, телевизоры,
+игровые консоли и аксессуары.
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Контакты</h3>
+
+<p>📧 info@techzone.uz</p>
+
+<p>📞 +998 90 123 45 67</p>
+
+<p>📍 Ташкент, Узбекистан</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Покупателям</h3>
+
+<p>Доставка</p>
+
+<p>Гарантия</p>
+
+<p>Возврат товара</p>
+
+<p>Поддержка</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Социальные сети</h3>
+
+<a href="#">Telegram</a><br>
+<a href="#">Instagram</a><br>
+<a href="#">YouTube</a><br>
+<a href="#">Facebook</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 TECHZONE MAX.
+Все права защищены.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- =========================
+     ПОДКЛЮЧЕНИЕ JS
+========================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
